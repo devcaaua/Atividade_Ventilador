@@ -1,0 +1,130 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.ventilador {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: #555;
+    border: 10px solid #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grade {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #333;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.helice {
+    position: absolute;
+    width: 25px;
+    height: 75px;
+    background-color: #aaa;
+    border-radius: 50%;
+}
+
+.helice1 {
+    transform: rotate(0deg) translateY(-35px);
+}
+
+.helice2 {
+    transform: rotate(120deg) translateY(-35px);
+}
+
+.helice3 {
+    transform: rotate(240deg) translateY(-35px);
+}
+
+.grade.vel1 {
+    animation: girar 0.8s linear infinite;
+}
+
+.grade.vel2 {
+    animation: girar 0.4s linear infinite;
+}
+
+.grade.vel3 {
+    animation: girar 0.1s linear infinite;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#status {
+    font-size: 20px;
+}
+
+#botao {
+    width: 130px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#botao:hover {
+    background-color: #666;
+}
+
+.velocidades {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-vel {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-vel:hover {
+    background-color: #666;
+}
